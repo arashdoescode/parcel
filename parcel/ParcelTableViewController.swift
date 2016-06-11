@@ -17,6 +17,9 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
     private var isEditingEndCoordinate: Bool = false
     private var suggestedRoute: PXGoogleDirectionsRoute? = nil
     
+    private var fromAddress: String?
+    private var toAddress: String?
+    
     let heightOfHeader: CGFloat = 40
     
     var tableViewCell = GMapTableViewCell()
@@ -154,7 +157,20 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
         if (indexPath.row == 0) {
             // update label 'pick a location'
 //            cell.pickALocationLabel.text = 
-            
+            switch indexPath.section {
+            case 1:
+                if let address = self.fromAddress {
+                    cell.pickALocationLabel.text = address
+                }
+                break;
+            case 2:
+                if let address = self.toAddress {
+                    cell.pickALocationLabel.text = address
+                }
+                break;
+            default:
+                break;
+            }
         }
         // Configure the cell...
         return cell
@@ -267,15 +283,17 @@ extension ParcelTableViewController: GMSAutocompleteViewControllerDelegate{
         if  self.isEditingStartCoordinate {
             self.isEditingStartCoordinate = false
             self.startCoordinate = place.coordinate
+            self.fromAddress = place.formattedAddress
         }
         // Store the coordinate as the end
         if self.isEditingEndCoordinate {
             self.isEditingEndCoordinate = false
             self.endCoordinate = place.coordinate
+            self.toAddress = place.formattedAddress
         }
         
         self.calculateTheRouteIfNeeded()
-
+        self.tableView.reloadData()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
