@@ -11,6 +11,11 @@ import GoogleMaps
 
 class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
+    private var startCoordinate: CLLocationCoordinate2D?
+    private var endCoordinate: CLLocationCoordinate2D?
+    private var isEditingStartCoordinate: Bool = false
+    private var isEditingEndCoordinate: Bool = false
+    private var suggestedRoute: PXGoogleDirectionsRoute? = nil
     
     let heightOfHeader: CGFloat = 40
     
@@ -118,6 +123,13 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
             cell.mapView.myLocationEnabled = true
             cell.mapView.settings.myLocationButton = true
             
+            // Draw the waypoints on the map
+            if let route = self.suggestedRoute {
+                route.drawOnMap(cell.mapView)
+                // You can also draw those with custom color and strokeWidth
+//                route.drawOnMap(cell.mapView, strokeColor: <#T##UIColor#>, strokeWidth: <#T##Float#>)
+            }
+            
             return cell
             
         } else if (indexPath.section == 1) {
@@ -179,6 +191,7 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
             let selected = indexPath.row
             if (selected == 0) {
                 autoCompleteGoogle()
+                self.isEditingStartCoordinate = true
             } else if (selected == 2) {
                 self.performSegueWithIdentifier("contact", sender: selected)
             } else {
@@ -188,6 +201,7 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
             let selected = indexPath.row
             if (selected == 0) {
                 autoCompleteGoogle()
+                self.isEditingEndCoordinate = true
             } else if (selected == 2) {
                 self.performSegueWithIdentifier("contact", sender: selected)
             } else {
@@ -205,12 +219,34 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
         autocompletecontroller.delegate = self
         let filter = GMSAutocompleteFilter()
         filter.type = .Establishment  //suitable filter type
-        filter.country = "MY"  //appropriate country code
+//        filter.country = "MY"  //appropriate country code
+        filter.country = "NL"
         autocompletecontroller.autocompleteFilter = filter
         self.presentViewController(autocompletecontroller, animated: true, completion: nil)
     }
     
-    
+    func calculateTheRouteIfNeeded() {
+        if let startCoordinate = self.startCoordinate, let endCoordinate = self.endCoordinate {
+            // Init the Direcation library with two coordinates to fetch the routes by Google directions api
+            let directionsAPI = PXGoogleDirections(apiKey: "AIzaSyBBRErhIWnLSZVDY9UruFQlbn58PsDTVB0",
+                                                   from: PXLocation.CoordinateLocation(startCoordinate),
+                                                   to: PXLocation.CoordinateLocation(endCoordinate))
+            // Fetch the routes
+            directionsAPI.calculateDirections({ response in
+                switch response {
+                case .Error:
+                    // Oops, something bad happened, see the error object for more information
+                    break
+                case .Success(let result):
+                    // Autoselect the first one to be displayed on the map
+                    self.suggestedRoute = result.1.first
+                    // Reload the tableView to trigger the mapCell draw the waypoints on map
+                    self.tableView.reloadData()
+                    break
+                }
+            })
+        }
+    }
 }
 
 
@@ -227,7 +263,18 @@ extension ParcelTableViewController: GMSAutocompleteViewControllerDelegate{
         //         let firstLocationCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1)) as? GMapTableViewCell
         //
         //        let secondLocationCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 2)) as? GMapTableViewCell
+        // Store the coordinate as the start
+        if  self.isEditingStartCoordinate {
+            self.isEditingStartCoordinate = false
+            self.startCoordinate = place.coordinate
+        }
+        // Store the coordinate as the end
+        if self.isEditingEndCoordinate {
+            self.isEditingEndCoordinate = false
+            self.endCoordinate = place.coordinate
+        }
         
+        self.calculateTheRouteIfNeeded()
 
         self.dismissViewControllerAnimated(true, completion: nil)
     }
