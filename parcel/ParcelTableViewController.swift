@@ -39,9 +39,10 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
         self.navigationItem.rightBarButtonItem = nextItem
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.hidden = true
+    
+    func nextButtonPressed(sender: UIBarButtonItem) {
+        // TODO code here
+        //This will go to the MAPS
     }
     
     
@@ -49,15 +50,7 @@ class ParcelTableViewController: UITableViewController, GMSMapViewDelegate, CLLo
         super.viewDidAppear(animated)
     }
     
-    func nextButtonPressed(sender: UIBarButtonItem) {
-        // TODO code here
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -13,12 +13,8 @@
 		5B26B7641D0BF14800FBD8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B26B7631D0BF14800FBD8FF /* Assets.xcassets */; };
 		5B26B7671D0BF14800FBD8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B26B7651D0BF14800FBD8FF /* LaunchScreen.storyboard */; };
 		5B26B7701D0BF1BF00FBD8FF /* ParcelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */; };
-		5B26B7721D0BF22800FBD8FF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */; };
 		5B26B7741D0BF34A00FBD8FF /* GMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */; };
-		5B643C7C1D0C119400F51A64 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643C7B1D0C119400F51A64 /* FirstViewController.swift */; };
-		5B643C7E1D0C11A600F51A64 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643C7D1D0C11A600F51A64 /* SecondViewController.swift */; };
-		5B643C801D0C11B100F51A64 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643C7F1D0C11B100F51A64 /* ThirdViewController.swift */; };
-		5B643C841D0C1F7700F51A64 /* GestureTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643C831D0C1F7700F51A64 /* GestureTestingViewController.swift */; };
+		5B643C871D0C509B00F51A64 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643C861D0C509B00F51A64 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +26,8 @@
 		5B26B7661D0BF14800FBD8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B26B7681D0BF14800FBD8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParcelTableViewController.swift; sourceTree = "<group>"; };
-		5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMapTableViewCell.swift; sourceTree = "<group>"; };
-		5B643C7B1D0C119400F51A64 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5B643C7D1D0C11A600F51A64 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		5B643C7F1D0C11B100F51A64 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		5B643C831D0C1F7700F51A64 /* GestureTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTestingViewController.swift; sourceTree = "<group>"; };
+		5B643C861D0C509B00F51A64 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8FEB436CA572185850CEEDFB /* Pods-parcel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parcel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parcel/Pods-parcel.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F03BC76E0DDD30C4F0E623 /* Pods_parcel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_parcel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,11 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				5B643C851D0C4E5200F51A64 /* GMaps */,
-				5B643C7A1D0C100500F51A64 /* SocketIOTesting */,
 				5B26B76E1D0BF16A00FBD8FF /* Supporting Files */,
 				5B26B7601D0BF14800FBD8FF /* Main.storyboard */,
-				5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */,
-				5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */,
 			);
 			path = parcel;
 			sourceTree = "<group>";
@@ -103,21 +92,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5B643C7A1D0C100500F51A64 /* SocketIOTesting */ = {
-			isa = PBXGroup;
-			children = (
-				5B643C7B1D0C119400F51A64 /* FirstViewController.swift */,
-				5B643C7D1D0C11A600F51A64 /* SecondViewController.swift */,
-				5B643C7F1D0C11B100F51A64 /* ThirdViewController.swift */,
-			);
-			name = SocketIOTesting;
-			sourceTree = "<group>";
-		};
 		5B643C851D0C4E5200F51A64 /* GMaps */ = {
 			isa = PBXGroup;
 			children = (
 				5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */,
-				5B643C831D0C1F7700F51A64 /* GestureTestingViewController.swift */,
+				5B643C861D0C509B00F51A64 /* MapViewController.swift */,
+				5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */,
 			);
 			name = GMaps;
 			sourceTree = "<group>";
@@ -253,14 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B643C7E1D0C11A600F51A64 /* SecondViewController.swift in Sources */,
-				5B643C7C1D0C119400F51A64 /* FirstViewController.swift in Sources */,
 				5B26B7701D0BF1BF00FBD8FF /* ParcelTableViewController.swift in Sources */,
-				5B643C801D0C11B100F51A64 /* ThirdViewController.swift in Sources */,
+				5B643C871D0C509B00F51A64 /* MapViewController.swift in Sources */,
 				5B26B75D1D0BF14800FBD8FF /* AppDelegate.swift in Sources */,
 				5B26B7741D0BF34A00FBD8FF /* GMapTableViewCell.swift in Sources */,
-				5B643C841D0C1F7700F51A64 /* GestureTestingViewController.swift in Sources */,
-				5B26B7721D0BF22800FBD8FF /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

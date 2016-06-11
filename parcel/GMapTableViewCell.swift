@@ -19,16 +19,6 @@ class GMapTableViewCell: UITableViewCell, GMSMapViewDelegate  {
     @IBOutlet var contactPerson: UILabel!
     @IBOutlet var pickALocationLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
 }
 
 extension GMapTableViewCell: CLLocationManagerDelegate {
