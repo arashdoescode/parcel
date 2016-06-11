@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15D93BA4B27B4E17314D1492 /* libPods-parcel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 290E146DCD33F593CD672EBE /* libPods-parcel.a */; };
 		5B26B75D1D0BF14800FBD8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B75C1D0BF14800FBD8FF /* AppDelegate.swift */; };
-		5B26B75F1D0BF14800FBD8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B75E1D0BF14800FBD8FF /* ViewController.swift */; };
 		5B26B7621D0BF14800FBD8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B26B7601D0BF14800FBD8FF /* Main.storyboard */; };
 		5B26B7641D0BF14800FBD8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B26B7631D0BF14800FBD8FF /* Assets.xcassets */; };
 		5B26B7671D0BF14800FBD8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B26B7651D0BF14800FBD8FF /* LaunchScreen.storyboard */; };
+		5B26B7701D0BF1BF00FBD8FF /* ParcelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */; };
+		5B26B7721D0BF22800FBD8FF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */; };
+		5B26B7741D0BF34A00FBD8FF /* GMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290E146DCD33F593CD672EBE /* libPods-parcel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-parcel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E24218ADC6EA5CA7ADCD80 /* Pods-parcel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parcel.release.xcconfig"; path = "Pods/Target Support Files/Pods-parcel/Pods-parcel.release.xcconfig"; sourceTree = "<group>"; };
 		5B26B7591D0BF14800FBD8FF /* parcel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parcel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B26B75C1D0BF14800FBD8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B26B75E1D0BF14800FBD8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B26B7611D0BF14800FBD8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B26B7631D0BF14800FBD8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B26B7661D0BF14800FBD8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B26B7681D0BF14800FBD8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParcelTableViewController.swift; sourceTree = "<group>"; };
+		5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMapTableViewCell.swift; sourceTree = "<group>"; };
+		8FEB436CA572185850CEEDFB /* Pods-parcel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parcel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parcel/Pods-parcel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D93BA4B27B4E17314D1492 /* libPods-parcel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51E21D162F191750E4E5FA5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FEB436CA572185850CEEDFB /* Pods-parcel.debug.xcconfig */,
+				58E24218ADC6EA5CA7ADCD80 /* Pods-parcel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B26B7501D0BF14800FBD8FF = {
 			isa = PBXGroup;
 			children = (
 				5B26B75B1D0BF14800FBD8FF /* parcel */,
 				5B26B75A1D0BF14800FBD8FF /* Products */,
+				51E21D162F191750E4E5FA5A /* Pods */,
+				A6734161B81C04E065CFBCE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +74,32 @@
 		5B26B75B1D0BF14800FBD8FF /* parcel */ = {
 			isa = PBXGroup;
 			children = (
-				5B26B75C1D0BF14800FBD8FF /* AppDelegate.swift */,
-				5B26B75E1D0BF14800FBD8FF /* ViewController.swift */,
+				5B26B76E1D0BF16A00FBD8FF /* Supporting Files */,
 				5B26B7601D0BF14800FBD8FF /* Main.storyboard */,
+				5B26B76F1D0BF1BF00FBD8FF /* ParcelTableViewController.swift */,
+				5B26B7711D0BF22800FBD8FF /* ContactViewController.swift */,
+				5B26B7731D0BF34A00FBD8FF /* GMapTableViewCell.swift */,
+			);
+			path = parcel;
+			sourceTree = "<group>";
+		};
+		5B26B76E1D0BF16A00FBD8FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B26B75C1D0BF14800FBD8FF /* AppDelegate.swift */,
 				5B26B7631D0BF14800FBD8FF /* Assets.xcassets */,
 				5B26B7651D0BF14800FBD8FF /* LaunchScreen.storyboard */,
 				5B26B7681D0BF14800FBD8FF /* Info.plist */,
 			);
-			path = parcel;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6734161B81C04E065CFBCE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				290E146DCD33F593CD672EBE /* libPods-parcel.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B26B76B1D0BF14800FBD8FF /* Build configuration list for PBXNativeTarget "parcel" */;
 			buildPhases = (
+				8FD110662A70B20E176A966F /* Check Pods Manifest.lock */,
 				5B26B7551D0BF14800FBD8FF /* Sources */,
 				5B26B7561D0BF14800FBD8FF /* Frameworks */,
 				5B26B7571D0BF14800FBD8FF /* Resources */,
+				95B632D35F9E77C499B7AE14 /* Embed Pods Frameworks */,
+				B2B8375A55F8B1834AEC9206 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +172,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8FD110662A70B20E176A966F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95B632D35F9E77C499B7AE14 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-parcel/Pods-parcel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B8375A55F8B1834AEC9206 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-parcel/Pods-parcel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B26B7551D0BF14800FBD8FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B26B75F1D0BF14800FBD8FF /* ViewController.swift in Sources */,
+				5B26B7701D0BF1BF00FBD8FF /* ParcelTableViewController.swift in Sources */,
 				5B26B75D1D0BF14800FBD8FF /* AppDelegate.swift in Sources */,
+				5B26B7741D0BF34A00FBD8FF /* GMapTableViewCell.swift in Sources */,
+				5B26B7721D0BF22800FBD8FF /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +341,11 @@
 		};
 		5B26B76C1D0BF14800FBD8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FEB436CA572185850CEEDFB /* Pods-parcel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parcel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arash.parcel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,9 +354,11 @@
 		};
 		5B26B76D1D0BF14800FBD8FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E24218ADC6EA5CA7ADCD80 /* Pods-parcel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parcel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arash.parcel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,6 +384,7 @@
 				5B26B76D1D0BF14800FBD8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
